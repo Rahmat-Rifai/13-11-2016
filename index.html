@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Muhammadiyah Pakem — Pesantren Vokasi &amp; Sekolah Pusat Keunggulan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+/* ==========================================================================
+   SMK MUHAMMADIYAH PAKEM — EDITORIAL / ANTI-SLOP DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+    --bg-paper: #F6F5F0;
+    --bg-surface: #FFFFFF;
+    --bg-subtle: #EFECE4;
+    --ink-primary: #141715;
+    --ink-secondary: #484E4A;
+    --ink-muted: #6E7570;
+    --brand-green: #0B3B2B;
+    --brand-green-hover: #135A42;
+    --accent-amber: #B45309;
+    --accent-amber-hover: #92400E;
+    --rule-color: #D6D3C9;
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 64px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-paper);
+    color: var(--ink-primary);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   TOP METADATA STRIP
+   ========================================================================== */
+.top-meta {
+    background-color: #07261C;
+    color: #D1DDD8;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.top-meta-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   HEADER IDENTITAS SEKOLAH
+   ========================================================================== */
+header {
+    background-color: var(--brand-green);
+    color: #FFFFFF;
+    border-bottom: 1px solid var(--rule-color);
+}
+
+.header-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.brand-identity {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.brand-logo {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    background-color: #FFFFFF;
+    padding: 8px;
+    border: 1px solid var(--rule-color);
+    flex-shrink: 0;
+}
+
+.brand-text .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #A7F3D0;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.brand-text h1 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.brand-text p {
+    font-size: 0.92rem;
+    color: #D1E7DD;
+    margin-top: 4px;
+}
+
+.header-Fact {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: #D1E7DD;
+    border-left: 2px solid var(--accent-amber);
+    padding-left: 14px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   NAVBAR COMPACT & RESPONSIVE (SOLUSI LAYAR HP)
+   ========================================================================== */
+nav {
+    background-color: #082D21;
+    border-bottom: 2px solid var(--accent-amber);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    align-items: stretch;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-links a {
+    color: #F1F5F3;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 14px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.09);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    background-color: var(--brand-green-hover);
+    color: #FFFFFF;
+}
+
+.nav-cta {
+    background-color: var(--accent-amber);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 14px 20px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.nav-cta:hover {
+    background-color: var(--accent-amber-hover);
+}
+
+/* ==========================================================================
+   LAYOUT UTAMA & SECTION
+   ========================================================================== */
+main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px 60px;
+}
+
+section {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--rule-color);
+    margin-bottom: 32px;
+    padding: 36px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--rule-color);
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.section-index {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--accent-amber);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+section h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+    color: var(--brand-green);
+    line-height: 1.15;
+}
+
+/* ==========================================================================
+   01. BERANDA (HERO ASIMETRIS)
+   ========================================================================== */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.hero-lead {
+    font-size: 1.05rem;
+    color: var(--ink-primary);
+    margin-bottom: 16px;
+}
+
+.hero-sub {
+    font-size: 0.95rem;
+    color: var(--ink-secondary);
+    margin-bottom: 24px;
+}
+
+.data-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--rule-color);
+    border-bottom: 1px solid var(--rule-color);
+    padding: 14px 0;
+    margin-top: 20px;
+    gap: 12px;
+}
+
+.data-item span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+}
+
+.data-item strong {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--brand-green);
+}
+
+.hero-figure {
+    border: 1px solid var(--rule-color);
+    background-color: var(--bg-subtle);
+    padding: 10px;
+}
+
+.hero-figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-figure figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ink-secondary);
+    padding-top: 8px;
+}
+
+/* ==========================================================================
+   02. PROFIL SEKOLAH
+   ========================================================================== */
+.profil-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 20px;
+}
+
+.profil-box {
+    background-color: var(--bg-paper);
+    border: 1px solid var(--rule-color);
+    padding: 24px;
+}
+
+.profil-box h3 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--brand-green);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--rule-color);
+    padding-bottom: 8px;
+}
+
+.profil-box ul {
+    padding-left: 18px;
+}
+
+.profil-box li {
+    margin-bottom: 8px;
+    font-size: 0.94rem;
+    color: var(--ink-secondary);
+}
+
+/* ==========================================================================
+   03. PROGRAM KEAHLIAN (6 JURUSAN ASLI)
+   ========================================================================== */
+.jurusan-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--rule-color);
+    border-left: 1px solid var(--rule-color);
+    margin-top: 16px;
+}
+
+.jurusan-cell {
+    border-right: 1px solid var(--rule-color);
+    border-bottom: 1px solid var(--rule-color);
+    padding: 22px;
+    background-color: var(--bg-surface);
+    transition: background-color 0.2s ease;
+}
+
+.jurusan-cell:hover {
+    background-color: var(--bg-paper);
+}
+
+.jurusan-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-amber);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.jurusan-cell h3 {
+    font-size: 1.12rem;
+    color: var(--brand-green);
+    margin-bottom: 8px;
+}
+
+.jurusan-cell p {
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+}
+
+/* ==========================================================================
+   04. BERITA & AGENDA SEKOLAH
+   ========================================================================== */
+.berita-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.berita-card {
+    border: 1px solid var(--rule-color);
+    background-color: var(--bg-paper);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.berita-date {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-amber);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.berita-card h3 {
+    font-size: 1.05rem;
+    color: var(--ink-primary);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.berita-card p {
+    font-size: 0.88rem;
+    color: var(--ink-secondary);
+}
+
+/* ==========================================================================
+   05. GALERI DOKUMENTASI ASLI (SMK MUH PAKEM)
+   ========================================================================== */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.galeri-card {
+    border: 1px solid var(--rule-color);
+    background-color: var(--bg-paper);
+    padding: 10px;
+}
+
+.galeri-card img {
+    width: 100%;
+    height: 195px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.galeri-card figcaption {
+    font-size: 0.84rem;
+    color: var(--ink-primary);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.galeri-card .sumber {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+/* ==========================================================================
+   06. KONTAK & PETA LOKASI SLEMAN
+   ========================================================================== */
+.kontak-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.kontak-info-list {
+    display: grid;
+    gap: 16px;
+}
+
+.kontak-row {
+    border-bottom: 1px solid var(--rule-color);
+    padding-bottom: 12px;
+}
+
+.kontak-row span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-amber);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.kontak-row p {
+    font-size: 0.94rem;
+    color: var(--ink-primary);
+}
+
+.map-frame {
+    border: 1px solid var(--rule-color);
+    padding: 8px;
+    background-color: var(--bg-subtle);
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 290px;
+    border: 0;
+    display: block;
+}
+
+/* ==========================================================================
+   FOOTER IDENTITAS SEKOLAH
+   ========================================================================== */
+footer {
+    background-color: var(--brand-green);
+    color: #E2ECE8;
+    border-top: 3px solid var(--accent-amber);
+    padding: 36px 20px;
+}
+
+.footer-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.88rem;
+}
+
+.footer-mono {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: #A7F3D0;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (SOLUSI NAVBAR HP COMPACT 1 BARIS)
+   ========================================================================== */
+@media (max-width: 860px) {
+    .hero-grid,
+    .profil-layout,
+    .jurusan-table,
+    .berita-list,
+    .galeri-grid,
+    .kontak-layout {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 24px 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    .top-meta-inner {
+        font-size: 0.7rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-inner {
+        padding: 18px 16px;
+        gap: 14px;
+    }
+
+    .brand-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .header-Fact {
+        width: 100%;
+        font-size: 0.74rem;
+    }
+
+    /* Navbar di HP: tetap 1 baris horizontal (bukan tumpukan vertikal panjang) */
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .nav-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: visible;
+    }
+
+    .nav-links a {
+        padding: 11px 14px;
+        font-size: 0.82rem;
+    }
+
+    .nav-cta {
+        padding: 11px 14px;
+        font-size: 0.74rem;
+    }
+
+    .data-strip {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="top-meta">
+        <div class="top-meta-inner">
+            <span>NPSN: 20401318 &bull; SK PENDIRIAN: 0272/H/1986</span>
+            <span>JL. PAKEM – TURI KM 0.5 NO. 23, PAKEMBINANGUN, SLEMAN, D.I. YOGYAKARTA</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-inner">
+            <div class="brand-identity">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Muhammadiyah.svg" alt="Lambang Resmi Persyarikatan Muhammadiyah" class="brand-logo">
+                <div class="brand-text">
+                    <span class="eyebrow">Pesantren Vokasi &bull; SMK Pusat Keunggulan</span>
+                    <h1>SMK Muhammadiyah Pakem</h1>
+                    <p>Kapanewon Pakem, Kabupaten Sleman, Daerah Istimewa Yogyakarta</p>
+                </div>
+            </div>
+            <div class="header-Fact">
+                <div>STATUS: TERAKREDITASI A</div>
+                <div>LUAS KAMPUS: 10.686 M&sup2;</div>
+                <div>TELP: (0274) 895178 / 0858-6561-1145</div>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Navigasi Utama">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#beranda">Beranda</a>
+                <a href="#profil">Profil Sekolah</a>
+                <a href="#jurusan">Program Keahlian</a>
+                <a href="#berita">Berita</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+            <a href="#kontak" class="nav-cta">SPMB / Info Kampus</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="beranda">
+            <div class="section-header">
+                <h2>Beranda &amp; Pengantar Institusi</h2>
+                <span class="section-index">01 / Ikhtisar Data Dapodik Sleman</span>
+            </div>
+            <div class="hero-grid">
+                <div>
+                    <p class="hero-lead">
+                        Selamat datang di laman resmi <strong>SMK Muhammadiyah Pakem (SMK Mupa)</strong>. Berlokasi di kawasan sejuk lereng Merapi, Kapanewon Pakem, Kabupaten Sleman, kami menyelenggarakan pendidikan kejuruan pada 6 konsentrasi keahlian yang memadukan penguasaan keterampilan rekayasa, teknologi informasi, dan bisnis syariah dengan pembinaan karakter <strong>Pesantren Vokasi</strong>.
+                    </p>
+                    <p class="hero-sub">
+                        Melalui pembelajaran berbasis <em>Teaching Factory</em> serta kemitraan langsung bersama Dunia Usaha dan Dunia Industri (DUDI), peserta didik dibekali kompetensi teknis berstandar industri, sertifikasi profesi, serta kesiapan kerja maupun wirausaha mandiri.
+                    </p>
+                    <div class="data-strip">
+                        <div class="data-item">
+                            <span>Konsentrasi Keahlian</span>
+                            <strong>6 Jurusan Vokasi</strong>
+                        </div>
+                        <div class="data-item">
+                            <span>Program Unggulan</span>
+                            <strong>SMK Pusat Keunggulan</strong>
+                        </div>
+                        <div class="data-item">
+                            <span>Model Pembinaan</span>
+                            <strong>Pesantren Vokasi</strong>
+                        </div>
+                    </div>
+                </div>
+                <figure class="hero-figure">
+                    <img src="https://smkmuhpakem.sch.id/wp-content/uploads/2025/07/FOR.jpg" alt="Apel kegiatan siswa di halaman gedung SMK Muhammadiyah Pakem Sleman">
+                    <figcaption>Dokumentasi kegiatan Fortasi peserta didik di halaman kampus SMK Muhammadiyah Pakem, Sleman.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="profil">
+            <div class="section-header">
+                <h2>Profil, Visi &amp; Misi Sekolah</h2>
+                <span class="section-index">02 / Identitas &amp; Arah Pendidikan</span>
+            </div>
+            <p>
+                Didirikan berdasarkan Surat Keputusan Nomor <strong>0272/H/1986</strong> pada 29 April 1986, SMK Muhammadiyah Pakem tumbuh menjadi salah satu sekolah kejuruan rujukan di wilayah Sleman Utara. Dengan dukungan fasilitas bengkel praktik, laboratorium komputer, dan studio gambar di atas lahan seluas 10.686 m&sup2;, sekolah ini berkomitmen melahirkan tamatan yang kompeten dan berakhlak mulia.
+            </p>
+            <div class="profil-layout">
+                <div class="profil-box">
+                    <h3>Visi Sekolah</h3>
+                    <p>
+                        Terwujudnya tamatan SMK Muhammadiyah Pakem yang Islami, berjiwa nasionalis, unggul dalam prestasi, terampil menguasai teknologi sesuai kebutuhan industri, mandiri, dan berbudaya lingkungan.
+                    </p>
+                </div>
+                <div class="profil-box">
+                    <h3>Misi Pendidikan</h3>
+                    <ul>
+                        <li>Mengamalkan nilai-nilai ajaran Islam sesuai Al-Qur'an dan As-Sunnah dalam aktivitas sekolah sehari-hari melalui program Pesantren Vokasi.</li>
+                        <li>Menyelenggarakan pembelajaran dan praktik kejuruan berbasis <em>Teaching Factory</em> bersama mitra industri nasional.</li>
+                        <li>Meningkatkan kompetensi pendidik dan sarana laboratorium pada 6 konsentrasi keahlian secara berkelanjutan.</li>
+                        <li>Melestarikan nilai budaya Daerah Istimewa Yogyakarta dan kepedulian terhadap lingkungan sekolah.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="jurusan">
+            <div class="section-header">
+                <h2>Program &amp; Konsentrasi Keahlian</h2>
+                <span class="section-index">03 / Kurikulum Merdeka Fase F</span>
+            </div>
+            <p>Enam konsentrasi keahlian resmi yang diselenggarakan di SMK Muhammadiyah Pakem:</p>
+            <div class="jurusan-table">
+                <article class="jurusan-cell">
+                    <div class="jurusan-meta">
+                        <span>KODE: RPL / PPLG</span>
+                        <span>TEKNOLOGI INFORMASI</span>
+                    </div>
+                    <h3>Rekayasa Perangkat Lunak (Programmer)</h3>
+                    <p>Mempelajari pemrograman web (HTML5, CSS3, JavaScript, framework modern), pengembangan aplikasi perangkat bergerak, perancangan basis data, dan rekayasa perangkat lunak.</p>
+                </article>
+                <article class="jurusan-cell">
+                    <div class="jurusan-meta">
+                        <span>KODE: ANIMASI</span>
+                        <span>SENI &amp; EKONOMI KREATIF</span>
+                    </div>
+                    <h3>Animasi 2D &amp; 3D</h3>
+                    <p>Mempelajari teknik pembuatan animasi 2 dimensi dan 3 dimensi, perancangan karakter, ilustrasi digital, penyusunan <em>storyboard</em>, animasi film, serta aset visual gim.</p>
+                </article>
+                <article class="jurusan-cell">
+                    <div class="jurusan-meta">
+                        <span>KODE: DPIB</span>
+                        <span>TEKNOLOGI KONSTRUKSI</span>
+                    </div>
+                    <h3>Desain Pemodelan &amp; Informasi Bangunan (Arsitek)</h3>
+                    <p>Mempelajari perencanaan gambar arsitektur gedung, pemodelan konstruksi 2D/3D berbantuan komputer (CAD/BIM), perhitungan rencana anggaran biaya, dan survei pemetaan.</p>
+                </article>
+                <article class="jurusan-cell">
+                    <div class="jurusan-meta">
+                        <span>KODE: TKRO</span>
+                        <span>TEKNIK OTOMOTIF</span>
+                    </div>
+                    <h3>Teknik Kendaraan Ringan Otomotif</h3>
+                    <p>Mempelajari perawatan serta perbaikan mesin mobil modern berteknologi injeksi, sistem sasis dan pemindah tenaga, serta kelistrikan dan AC kendaraan ringan.</p>
+                </article>
+                <article class="jurusan-cell">
+                    <div class="jurusan-meta">
+                        <span>KODE: TSM / TBSM</span>
+                        <span>TEKNIK OTOMOTIF</span>
+                    </div>
+                    <h3>Teknik Sepeda Motor</h3>
+                    <p>Mempelajari perawatan berkala, diagnostik sistem injeksi elektronik (<em>tune up</em> injeksi), perbaikan mesin, sasis, dan kelistrikan sepeda motor bersama mitra industri resmi.</p>
+                </article>
+                <article class="jurusan-cell">
+                    <div class="jurusan-meta">
+                        <span>KODE: PBS</span>
+                        <span>BISNIS &amp; MANAJEMEN</span>
+                    </div>
+                    <h3>Layanan Perbankan Syariah</h3>
+                    <p>Mempelajari pengelolaan akuntansi keuangan, layanan operasional perbankan, administrasi transaksi, serta produk pembiayaan berlandaskan prinsip ekonomi syariah Islam.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="berita">
+            <div class="section-header">
+                <h2>Berita &amp; Agenda Kegiatan Sekolah</h2>
+                <span class="section-index">04 / Arsip Warta Kampus Mupa</span>
+            </div>
+            <div class="berita-list">
+                <article class="berita-card">
+                    <div>
+                        <span class="berita-date">06 NOVEMBER 2026</span>
+                        <h3>Siswa XI TSM Dibekali Pelatihan AI Digital Marketing Bersama AHASS Kurnia Jaya</h3>
+                        <p>Selain menguasai keterampilan teknis bengkel sepeda motor, siswa kelas XI TSM mengikuti pelatihan pemasaran digital berbasis kecerdasan buatan untuk memperkuat jiwa wirausaha.</p>
+                    </div>
+                </article>
+                <article class="berita-card">
+                    <div>
+                        <span class="berita-date">10 NOVEMBER 2026</span>
+                        <h3>Evaluasi &amp; Monitoring Sekolah Berbasis Budaya Daerah Istimewa Yogyakarta</h3>
+                        <p>SMK Muhammadiyah Pakem melaksanakan kegiatan evaluasi dan gelar karya pelestarian budaya lokal Yogyakarta sebagai wujud pendidikan karakter berbasis kearifan daerah.</p>
+                    </div>
+                </article>
+                <article class="berita-card">
+                    <div>
+                        <span class="berita-date">23 OKTOBER 2026</span>
+                        <h3>Kunjungan Industri 281 Siswa Kelas XI ke Dunia Usaha dan Industri Surabaya–Bali</h3>
+                        <p>Sebanyak 281 peserta didik lintas jurusan mengikuti program kunjungan industri guna mengamati langsung standar operasional kerja di perusahaan teknologi, kreatif, dan manufaktur.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="galeri">
+            <div class="section-header">
+                <h2>Galeri Dokumentasi Kegiatan</h2>
+                <span class="section-index">05 / Foto Asli SMK Muhammadiyah Pakem</span>
+            </div>
+            <div class="galeri-grid">
+                <figure class="galeri-card">
+                    <img src="https://smkmuhpakem.sch.id/wp-content/uploads/2023/02/berita-327-apa-itu-jurusan-rpl-dan-apa-saja-keunggulan-jurusan-rpl-share-20201110-152329-1024x683.jpg" alt="Kegiatan pembelajaran pemrograman di laboratorium komputer RPL SMK Muhammadiyah Pakem">
+                    <figcaption>
+                        Praktik Pemrograman di Laboratorium RPL
+                        <span class="sumber">Sumber: smkmuhpakem.sch.id/jurusan-rpl</span>
+                    </figcaption>
+                </figure>
+                <figure class="galeri-card">
+                    <img src="https://smkmuhpakem.sch.id/wp-content/uploads/2023/02/P1090767-1-1024x683.jpg" alt="Kegiatan praktik studio gambar arsitektur jurusan DPIB SMK Muhammadiyah Pakem">
+                    <figcaption>
+                        Studio Perencanaan &amp; Gambar Bangunan (DPIB)
+                        <span class="sumber">Sumber: smkmuhpakem.sch.id/jurusan-dpib</span>
+                    </figcaption>
+                </figure>
+                <figure class="galeri-card">
+                    <img src="https://smkmuhpakem.sch.id/wp-content/uploads/2023/02/DSC01860-1024x580.jpg" alt="Praktik bengkel otomotif sepeda motor siswa SMK Muhammadiyah Pakem">
+                    <figcaption>
+                        Praktik Perawatan Mesin di Bengkel Otomotif TBSM
+                        <span class="sumber">Sumber: smkmuhpakem.sch.id/jurusan-tbsm</span>
+                    </figcaption>
+                </figure>
+                <figure class="galeri-card">
+                    <img src="https://smkmuhpakem.sch.id/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-23-at-13.28.05-1024x768.jpeg" alt="Pembinaan K3 dan persiapan PKL siswa SMK Muhammadiyah Pakem">
+                    <figcaption>
+                        Pembinaan K3 &amp; Persiapan Praktik Kerja Lapangan
+                        <span class="sumber">Sumber: smkmuhpakem.sch.id</span>
+                    </figcaption>
+                </figure>
+                <figure class="galeri-card">
+                    <img src="https://smkmuhpakem.sch.id/wp-content/uploads/2023/09/IMG20230902150222-1024x768.jpg" alt="Prestasi siswa SMK Muhammadiyah Pakem juara MTQ tingkat Kapanewon Pakem">
+                    <figcaption>
+                        Raihan Prestasi Juara Lomba MTQ Kapanewon Pakem
+                        <span class="sumber">Sumber: smkmuhpakem.sch.id</span>
+                    </figcaption>
+                </figure>
+                <figure class="galeri-card">
+                    <img src="https://smkmuhpakem.sch.id/wp-content/uploads/2023/10/WhatsApp-Image-2023-09-30-at-22.30.08-819x1024.jpeg" alt="Penghargaan medali kejuaraan siswa SMK Muhammadiyah Pakem">
+                    <figcaption>
+                        Prestasi Siswa dalam Kejuaraan Pencak Silat Tapak Suci
+                        <span class="sumber">Sumber: smkmuhpakem.sch.id</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <div class="section-header">
+                <h2>Kontak &amp; Lokasi Kampus</h2>
+                <span class="section-index">06 / Layanan Informasi &amp; Peta Sleman</span>
+            </div>
+            <div class="kontak-layout">
+                <div class="kontak-info-list">
+                    <div class="kontak-row">
+                        <span>Alamat Lengkap</span>
+                        <p>Jl. Pakem – Turi KM 0,5 No. 23, Area Sawah, Pakembinangun, Kapanewon Pakem, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55582</p>
+                    </div>
+                    <div class="kontak-row">
+                        <span>Telepon &amp; WhatsApp Admisi</span>
+                        <p>Telepon Kantor: (0274) 895178<br>WhatsApp Humas/SPMB: 0858-6561-1145</p>
+                    </div>
+                    <div class="kontak-row">
+                        <span>Surat Elektronik &amp; Laman Resmi</span>
+                        <p>Email: smkmuhpakem@yahoo.co.id<br>Website: https://smkmuhpakem.sch.id</p>
+                    </div>
+                    <div class="kontak-row">
+                        <span>Jam Pelayanan Kampus</span>
+                        <p>Senin – Kamis: 07.00 – 15.30 WIB<br>Jumat: 07.00 – 14.00 WIB</p>
+                    </div>
+                </div>
+                <div class="map-frame">
+                    <iframe src="https://www.google.com/maps?q=SMK+Muhammadiyah+Pakem+Sleman+Yogyakarta&output=embed" title="Peta Lokasi SMK Muhammadiyah Pakem di Sleman Yogyakarta" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <strong>SMK MUHAMMADIYAH PAKEM</strong> &mdash; Jl. Pakem - Turi No. 23, Pakembinangun, Kec. Pakem, Kab. Sleman, D.I. Yogyakarta
+            </div>
+            <div class="footer-mono">
+                &copy; 2026 DISUSUN OLEH RAHMAT RIFAI (XI RPL)
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
