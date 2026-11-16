@@ -63,7 +63,3 @@
 
 **tuliskan kesimpulan dari kegiatan praktik pembuatan website sekolah:**
 html dan css berhasil digunakan membuat website profil sekolah responsif.
-
-| guru mata pelajaran | peserta didik |
-| :---: | :---: |
-| (...........................................) | ( rahmat rifai ) |
